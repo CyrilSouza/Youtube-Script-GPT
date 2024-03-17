@@ -1,6 +1,5 @@
 # Bring in deps
 import os 
-from api_key import api_key 
 from fpdf import FPDF
 from io import BytesIO
 import streamlit as st 
@@ -10,8 +9,9 @@ from langchain.chains import LLMChain
 from langchain.memory import ConversationBufferMemory
 from langchain_community.utilities import WikipediaAPIWrapper
 
-os.environ['OPENAI_API_KEY'] = api_key
 
+
+api_key=os.getenv("OPEN_API_KEY")
 # App framework
 st.title('🔗 YouTube Script GPT ')
 prompt = st.text_input('Plug in your prompt here') 
