@@ -58,6 +58,7 @@ if prompt:
     with st.expander('Wikipedia Research'): 
         st.info(wiki_research)  
 
+    
     def download_script_pdf(script):
         pdf = FPDF()
         pdf.add_page()
